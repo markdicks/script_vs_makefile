@@ -12,6 +12,12 @@ hello: hello.sh
 	@echo "Building the Hello, World! script..."
 	@chmod +x hello.sh
 
+# Target: add_line
+# - This target appends "echo hello world" to the 'hello.sh' script.
+add_line:
+	@echo "echo \"Hello, World!\"" >> hello.sh
+	@echo "Added 'echo hello world' to hello.sh."
+
 # Target: run
 # - This target executes the 'hello.sh' script.
 run: hello
